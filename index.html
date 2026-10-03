@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page"> 
+<header class="page-header"> 
+<button class="page-back" type="button" arial-label= "Go back">&lsaquo;</button>
+<h1 class="page-title">Personal Information</h1>
+<p class="page-subtitle">Fill in Your Detail To Get Your Verification Code</p>
+</header>
+
+<form class="card" action="#" method="post">
+
+<div class="Field">
+    <label class="field-label" for="FullName">Full name</label>
+    <input class="field-input" type="text" id="fullName" name="fullName" placeholder="e.g Joe Anderson" required>
+</div>
+
+<div class="Field">
+<label class="field-label" for="email">Email Address</label>
+    <input class="field-input" type="email" id="email" name="email" placeholder="e.g Joeandy234@gmail.com" required>
+</div>
+
+<div class="Field">
+<label class="field-label" for="phone">Phone number</label>
+    <input class="field-input" type="tel" id="phone" name="phone" placeholder="e.g +234" required>
+</div>
+
+<div class="Field">
+<label class="field-label" for="eventButton">Event Type</label>
+
+<div class="dropdown"> 
+ <button class="dropdown-button" type="button" id="eventButton"> <span class="dropdown-value">e.g VIP, Regular</span>
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<polyline points="6 9 12 15 18 9"></polyline>
+</svg>
+</button>
+<ul class="dropdown-list" hidden>
+<li class="dropdown-option" data-value="regularly">Regular</li>
+<li class="dropdown-option" data-value="vip">VIP</li>
+<li class="dropdown-option" data-value="vvip">VVIP</li>
+</ul>
+
+<input type="hidden" name="eventType" id="eventType">
+</div>
+</div>
+
+
+
+<button class="card-button" type="submit">Get code</button>
+
+</form>
+</main>
+<script src="script.js"></script> 
+</body>
+</html>

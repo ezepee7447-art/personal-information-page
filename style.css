@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root{
+--pale-amber:#FFF4D6;
+--light-amber:#F6D28B;
+--golden-amber:#E6A23C;
+--amber:#B5651D;
+--dark-amber:#3B1F0E;
+--burnt-amber:#6B3A0F;
+}
+
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body{
+font-family: "Poppins", sans-serif;
+background-color: var(--pale-amber);
+color: var(--dark-amber);
+}
+
+.page{
+min-height: 100vh;
+padding: 24px 20px;
+}
+
+.page-header{
+text-align: center;
+margin-bottom: 24px;
+position: relative;
+}
+
+.page-back{
+position: absolute;
+left: 0;
+top: 0;
+background: none;
+border: none;
+font-size: 2rem;
+color: var(--amber);
+cursor: pointer;
+}
+
+.page-title{
+font-size: 1.5rem;
+font-weight: 600;
+padding-top: 4px;
+color: var(--amber);
+}
+
+.page-subtitle{
+font-size: 0.8rem;
+color: var(--amber);
+opacity: 0.7;
+margin-top: 6px;
+}
+
+.card{
+max-width: 430px;
+margin:0 auto;
+padding: 24px 20px;
+border: 1px solid var(--golden-amber);
+border-radius: 12px;
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.Field{
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.field-label{
+font-size: 0.9rem;
+font-weight: 500;
+color: var(--amber);
+}
+
+.field-input{
+width: 100%;
+padding: 12px;
+font-family: inherit;
+font-size: 0.9rem;
+color: var(--dark-amber);
+background-color: transparent;
+border: 1px solid #9a9a9a;
+border-radius: 8px;
+}
+
+.dropdown{
+position: relative;
+}
+
+.dropdown-button{
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 12px;
+font-family: inherit;
+font-size: 0.9rem;
+font-weight: 400;
+color: #9a9a9a;
+background: transparent;
+border: 1px solid #9a9a9a;
+border-radius: 8px;
+cursor: pointer;
+text-align: left;
+}
+
+.dropdown-list{
+position: absolute;
+top: 100%;
+left: 0;
+width: 100%;
+list-style: none;
+background: var(--pale-amber);
+border: 1px solid #9a9a9a;
+border-top: none;
+border-radius: 0 0 8px 8px;
+overflow: hidden;
+z-index: 10;
+}
+
+.dropdown-option{
+padding: 10px;
+font-size: 0.85rem;
+color: #9a9a9a;
+cursor: pointer;
+}
+
+.dropdown-option:hover{
+background-color: var(--light-amber);
+color: var(--dark-amber);
+}
+
+.dropdown-button--selected{
+color: #000000;
+}
+.field-input:not(:placeholder-shown){
+border-color: #000000;
+}
+
+.field-input::placeholder{
+color: #756B61;
+opacity: 0.4;
+}
+
+.field-input:focus{
+outline: 2px solid var(--golden-amber);
+border-color: transparent;
+}
+
+select.field-input:invalid{
+color: #9a9a9a;
+}
+
+.card-button{
+width: 100%;
+padding: 14px;
+margin-top: 24px;
+font-family: inherit;
+font-size: 1rem;
+font-weight: 500;
+color: #ffffff;
+background-color: var(--amber);
+border: none;
+border-radius: 8px;
+cursor: pointer;
+transition: background-color 0.2s ease;
+}
+
+.card-button:hover{
+background-color: var(--dark-amber);
+}
+
+.card-button:focus-visible{
+outline: 2px solid var(--golden-amber);
+outline-offset: 2px;
+}
+
+
+
+@media(min-width: 768px) {
+.page{
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 48px 24px;
+}
+
+.page-header{
+width: 100%;
+max-width: 430px;
+margin: 0 auto 24px;
+}
+
+
+.card{
+width: 100%;
+padding: 32px 28px;
+}
+
+.page-title{
+font-size: 1.75rem;
+}
+
+.page-subtitle{
+font-size: 0.95rem;
+}
+}
